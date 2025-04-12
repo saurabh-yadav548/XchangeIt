@@ -19,7 +19,9 @@ digital community.
 
 #Tech Stack-
 Frontend: HTML, CSS, JavaScript
+<br>
 Backend: JavaScript
+<br>
 UI/UX Designing : Figma
 
 #Current Progress (Mid Evaluation)
