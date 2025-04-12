@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login / Signup</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      margin: 0;
+      padding: 40px 0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
+
+    .container {
+      background: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      width: 400px;
+      position: relative;
+    }
+
+    form {
+      display: none;
+    }
+
+    form.active {
+      display: block;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin: 5px 0 20px;
+    }
+
+    a {
+      color: rgb(11, 105, 212);
+      font-weight: bold;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: 500;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    #loginForm p{ 
+      text-align:center;
+      cursor:pointer;
+    }
+
+    button[type="submit"] {
+      background: rgb(36, 44, 81);
+      color: white;
+      padding: 12px;
+      width: 100%;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .terms {
+      font-size: 13px;
+      margin: 10px 0 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+     
+
+    <form id="signupForm" class="active">
+      <h2>Sign up your Account</h2>
+      <p>Already have an account? <a onclick="showLogin()">SIGN IN</a></p>
+
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Enter your name" required>
+
+      <label for="address">Address</label>
+      <input type="text" id="address" placeholder="Enter your address" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Enter your e-mail" required>
+
+      <div class="passwords">
+        <div>
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter password" required>
+        </div>
+        <div>
+          <label for="confirmPassword">Password Confirmation</label>
+          <input type="password" id="confirmPassword" placeholder="Re-enter password" required>
+        </div>
+      </div>
+
+      <p class="terms">
+        By creating an account, you agree to our 
+        <a href="#">terms</a> and 
+        <a href="#">privacy policy</a>.
+      </p>
+
+      <button type="submit">Create an account</button>
+    </form>
+
+    
+    <form id="loginForm">
+      <h2>Login to your Account</h2>
+      <p>Don't have an account? <a onclick="showSignup()">SIGN UP</a></p>
+
+      <label for="loginEmail">Email</label>
+      <input type="email" id="loginEmail" placeholder="Enter your e-mail" required>
+
+      <label for="loginPassword">Password</label>
+      <input type="password" id="loginPassword" placeholder="Enter your password" required>
+      <button type="submit">Login</button>
+      <p>forgot password?</p>
+
+    </form>
+  </div>
+
+  <script>
+    const signupForm = document.getElementById("signupForm");
+    const loginForm = document.getElementById("loginForm");
+
+    function showLogin() {
+      signupForm.classList.remove("active");
+      loginForm.classList.add("active");
+    }
+
+    function showSignup() {
+      loginForm.classList.remove("active");
+      signupForm.classList.add("active");
+    }
+
+   
+    signupForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const password = document.getElementById("password").value;
+      const confirm = document.getElementById("confirmPassword").value;
+
+      if (password !== confirm) {
+        alert("Passwords do not match!");
+        return;
+      }
+
+      alert("Account created successfully!");
+      // Redirect or clear form here if needed
+    });
+
+    // Login form submission
+    loginForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const email = document.getElementById("loginEmail").value;
+      alert(`Logged in with email: ${email}`);
+      // Redirect after login if needed
+    });
+  </script>
+
+</body>
+</html>
