@@ -18,15 +18,15 @@ purchases
 digital community.
 
 #Tech Stack-
->Frontend: HTML, CSS, JavaScript
->Backend: JavaScript
->UI/UX Designing : Figma
+Frontend: HTML, CSS, JavaScript
+Backend: JavaScript
+UI/UX Designing : Figma
 
 #Current Progress (Mid Evaluation)
 We have prepared the front-end which is yet to be done. We have prepared the ppt and we are working on the rest of the project.
 
 #Team Members 👥
-> Saurabh kumar 
-> Utkrisht Chandran
-> Sagar Kumar
-> Aditya Shah
+ Saurabh kumar 
+ Utkrisht Chandran
+ Sagar Kumar
+ Aditya Shah
