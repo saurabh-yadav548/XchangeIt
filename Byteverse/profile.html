@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile Page</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f0f4f8;
+      padding: 20px;
+      color: #333;
+    }
+
+    .detail {
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      margin-bottom: 30px;
+      align-items: center;
+    }
+
+    .photo {
+      flex: 1 1 150px;
+      max-width: 200px;
+      height: 200px;
+      background-color: #e0e0e0;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 18px;
+      color: #555;
+      margin-right: 30px;
+      margin-bottom: 20px;
+    }
+
+    .text {
+      flex: 2 1 300px;
+    }
+
+    .info {
+      margin-bottom: 15px;
+    }
+
+    .info label {
+      display: block;
+      font-weight: 600;
+      font-size: 14px;
+      color: #888;
+      margin-bottom: 4px;
+    }
+
+    .info p {
+      font-size: 16px;
+      color: #222;
+      background-color: #f9f9f9;
+      padding: 10px 15px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+    }
+
+    .grid-box {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .box1 {
+      background-color: #ffffff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      text-align: center;
+      font-weight: 500;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      cursor: pointer;
+    }
+
+    .box1:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: 600px) {
+      .detail {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .photo {
+        margin-right: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="detail">
+    <div class="photo">
+      Profile Photo
+    </div>
+    <div class="text">
+      <div class="info">
+        <label>Name:</label>
+        <p>Aditya shah</p>
+      </div>
+      <div class="info">
+        <label>Email:</label>
+        <p>aditya1241@gmail.com</p>
+      </div>
+      <div class="info">
+        <label>Phone:</label>
+        <p>+91 997737xxxx</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid-box">
+    <div class="box1">
+      <p>Your Orders</p>
+    </div>
+    <div class="box1">
+      <p>Wishlist / Favourites</p>
+    </div>
+    <div class="box1">
+      <p>Transaction History</p>
+    </div>
+    <div class="box1">
+      <p>Rate Us</p>
+    </div>
+    <div class="box1">
+      <p>Help & Support</p>
+    </div>
+    <div class="box1">
+      <p>Sign out</p>
+    </div>
+  </div>
+
+</body>
+</html>

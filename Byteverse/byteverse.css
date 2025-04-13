@@ -11,7 +11,7 @@
   body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    background-color:antiquewhite;
+    background:url('background3.jpg') ;
   }
   
   /* Sidebar */
@@ -107,19 +107,28 @@
 .hero-container {
     position: relative;
     max-width: 90%;
-    height:50vh;
+    height:60vh;
     margin: 60px auto;
     overflow: hidden;
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
     padding: 40px 0;
     background-color:white;
-    /* background:url('background.jpg') center/cover no-repeat; */
+   background-color:rgb(234, 229, 223);
+
+    background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      /* background-attachment: fixed; */
+      
+
    
   }
 
+ 
   .hero-track {
     display: flex;
+    margin-top: 70px;
     transition: transform 0.6s ease;
     padding: 0 40px;
   }
@@ -132,13 +141,21 @@
     background: #fff;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     transition: transform 0.3s ease;
+    padding:5px;
+   min-height:30vh;
+    
   }
 
   .hero-item img {
     width: 100%;
-    height: auto;
+    height: 20vh;
     display: block;
   }
+.box-content{
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+}
 
   .hero-item:hover {
     transform: scale(1.2);

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Help</title>
+    <style>
+        *{
+            margin:0;
+
+        }
+        body{
+            text-align:center;
+            margin-top:30vh;
+            background-color:rgb(187, 184, 180);
+        }
+        .support{
+            display:flex;
+            justify-content: center;
+            gap:30px;
+          margin-top:10px;
+        }
+        .support-box{
+            border:1px solid black;
+            display:flex;
+            flex-direction: column;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0px 0px 10px rgba(0,0,0,0.1);
+        }
+        .support-box:hover{
+            background-color:#f0f0f0;
+        }
+
+        .support-box p{
+            color:rgb(24, 103, 104);
+        }
+        .icon{
+            font-size:50px;
+            border:2px solid black;
+            cursor:pointer;
+            border-radius:5px;
+            padding:10px;
+        }
+        .icon i{
+            color:#4CAF50;
+        }
+
+        .support-box:nth-child(2) .icon i {
+            color: #03A9F4;
+        }
+
+        .support-box:nth-child(3) .icon i {
+            color: #8BC34A;
+        }
+
+        .cta-button {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .cta-button:hover {
+            background-color: #3e8e41;
+        }
+
+     </style>
+</head>
+<body>
+    
+    <h1>Support Section</h1>
+    <div class="support">
+        <div class="support-box">
+           <div class="icon">
+            <i class="fa-solid fa-phone-flip"></i>
+           </div>
+           <p>Text Us</p>
+           <p> +91 9428764520</p>
+        </div>
+
+        <div class="support-box">
+            <div class="icon">
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+            <p>Write to Us</p>
+            <p>5th floor ,Sai tower patna</p>
+         </div>
+
+         <div class="support-box">
+            <div class="icon">
+                <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <p>chat with Us</p>
+            <p> +91 9567384008</p>
+         </div>
+    </div>
+</body>
+</html>

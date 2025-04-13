@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Upload Product</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      background: #aaa6a6;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background: #daddd9;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #4d4647;
+    }
+
+    label {
+      font-weight: bold;
+      margin-bottom: 5px;
+      display: block;
+      color: #140e0e;
+    }
+
+    input[type=text],
+    input[type=number],
+    input[type=file],
+    textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    button {
+      width: 100%;
+      background-color: #007bff;
+      color: white;
+      padding: 14px;
+      border: none;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 10px;
+      }
+
+      .container {
+        padding: 15px;
+      }
+
+      button {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Upload Product</h2>
+    <form id="uploadForm">
+      <label for="productName">Product Name</label>
+      <input type="text" id="productName" name="productName"  placeholder="Enter your name" required>
+
+      <label for="price">Estimated Price ($)</label>
+      <input type="number" id="price" name="price"  placeholder="Enter your estimated price" required>
+
+      <label for="title">Description Title</label>
+      <input type="text" id="title" name="title" required>
+
+      <label for="description">Detailed Description</label>
+      <textarea id="description" name="description" required></textarea>
+
+      <label for="address">Address</label>
+      <input type="text" id="address" name="address" placeholder="Enter Your Current address" required>
+
+      <label for="file">Upload File/Image</label>
+      <input type="file" id="file" name="file" accept=\"image/*,.pdf,.jpg\" required>
+
+      <button type="submit">Submit Product</button>
+    </form>
+  </div>
+
+  <script>
+   document.getElementById('uploadForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const formData = new FormData(this);
+
+  console.log("Form Data:");
+  for (let [key, value] of formData.entries()) {
+    if (key === 'file') {
+      console.log(`${key}:`, value.name);
+    } else {
+      console.log(`${key}:`, value);
+    }
+  }
+
+  alert("Product submitted successfully!");
+  this.reset();
+});
+
+  </script>
+</body>
+</html>
