@@ -5,6 +5,10 @@
 <br>
 XChangeIt 🛒🧠
 
+#Link to drive for presentation pdf, and video pitch
+<br> https://drive.google.com/drive/folders/16NSqAxDLNuLfrbPJC9PPFglpjSOhQGE7?usp=sharing
+
+
 #Problem Statement-
 <br>
 People often have useful items like books or tools that are no longer needed, while others are searching for the same things. There is no dedicated platform to enable trusted, community-driven resource exchange or resale — leading to waste and missed connections.We aim to solve this by creating a platform where users can share, exchange, or sell resources, while building connections and trust within the community
@@ -19,6 +23,9 @@ exchange, or sell
 purchases
 ● Build a trusted system of reuse within their local or
 digital community.
+
+
+
 
 #Tech Stack-
 <br>
@@ -35,10 +42,10 @@ We have prepared the front-end which is yet to be done. We have prepared the ppt
 
 #Team Members 👥
 <br>
- Saurabh kumar
- <br>
- Utkrisht Chandran
- <br>
- Sagar Kumar
- <br>
- Aditya Shah
+Saurabh kumar
+<br>
+Utkrisht Chandran
+<br>
+Sagar Kumar
+<br>
+Aditya Shah
